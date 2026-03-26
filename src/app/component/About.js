@@ -49,9 +49,11 @@ export default function About() {
           </div>
 
           <div className="mt-8 text-center">
+            <a href="https://warthunder.ru/ru">
             <button className="bg-yellow-500 text-gray-900 px-8 py-3 rounded-lg hover:bg-yellow-400 transition font-semibold">
               Начать играть бесплатно
             </button>
+            </a>
           </div>
         </div>
       </div>

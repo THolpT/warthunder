@@ -20,7 +20,7 @@ export default function TehnicaCard({ tehnica }) {
           <span>{tehnica.era} Эра</span>
         </div>
         <div className="flex gap-2">
-          <a href="#" className="flex-1 bg-yellow-500 text-gray-900 px-3 py-2 rounded hover:bg-yellow-400 transition text-sm font-semibold text-center">
+          <a href="https://xn--80aabtwbbuhbiqdxddn.xn--p1ai/" className="flex-1 bg-yellow-500 text-gray-900 px-3 py-2 rounded hover:bg-yellow-400 transition text-sm font-semibold text-center">
             Подробнее
           </a>
         </div>
