@@ -1,4 +1,3 @@
-// app/vehicles/VehiclesContent.js
 'use client'
 
 import { useState, useEffect } from 'react';
@@ -78,7 +77,6 @@ export default function VehiclesContent() {
 
   const itemsPerPage = 12;
 
-  // Функция для получения общего количества страниц
   const fetchTotalCount = async () => {
     try {
       let url = `https://wtvehiclesapi.duckdns.org/api/vehicles?limit=1&page=1`;
@@ -100,7 +98,6 @@ export default function VehiclesContent() {
         setTotalItems(total);
         setTotalPages(Math.ceil(total / itemsPerPage));
       } else {
-        // Если заголовка нет, делаем запрос на все данные чтобы посчитать
         const allDataUrl = `https://wtvehiclesapi.duckdns.org/api/vehicles?limit=10000&page=1${filters.country ? `&country=${filters.country}` : ''
           }${filters.type ? `&type=${filters.type}` : ''}${filters.era ? `&era=${filters.era}` : ''
           }`;
@@ -119,7 +116,6 @@ export default function VehiclesContent() {
     fetchVehicles();
   }, [currentPage, filters]);
 
-  // Загружаем общее количество при изменении фильтров
   useEffect(() => {
     fetchTotalCount();
   }, [filters]);
@@ -143,7 +139,6 @@ export default function VehiclesContent() {
       const data = await response.json();
       setVehicles(data);
 
-      // Если не получили totalPages из fetchTotalCount, пробуем получить из заголовка
       const totalCount = response.headers.get('x-total-count');
       if (totalCount && totalPages === 1) {
         const total = parseInt(totalCount);
@@ -196,7 +191,6 @@ export default function VehiclesContent() {
     }
   };
 
-  // Generate page numbers to display
   const getPageNumbers = () => {
     const delta = 2;
     const range = [];
