@@ -36,8 +36,7 @@ export default function Tehnica() {
           <h2 className="text-3xl font-bold text-white">Техника War Thunder</h2>
           <button
             onClick={handleViewAll}
-            className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-6 py-2 rounded-lg transition-colors duration-200 font-medium"
-          >
+            className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-6 py-2 rounded-lg transition-colors duration-200 font-medium">
             Вся техника →
           </button>
         </div>
@@ -47,8 +46,7 @@ export default function Tehnica() {
             className={`absolute left-0 top-1/2 -translate-y-1/2 -ml-4 lg:-ml-8 z-10 
               bg-gray-800 hover:bg-gray-700 text-white rounded-full p-2 
               transition-colors duration-200 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
-            disabled={currentPage === 1}
-          >
+            disabled={currentPage === 1}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -57,8 +55,7 @@ export default function Tehnica() {
             onClick={handleNextPage}
             className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-8 z-10 
               bg-gray-800 hover:bg-gray-700 text-white rounded-full p-2 
-              transition-colors duration-200"
-          >
+              transition-colors duration-200">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
